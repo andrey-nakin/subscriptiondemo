@@ -1,0 +1,6 @@
+type Query {
+    """
+    Returns application version.
+    """
+    appVersion: String!
+}
