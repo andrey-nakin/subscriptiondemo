@@ -1,6 +1,5 @@
 package org.graphql.subscriptiondemo.dto;
 
-import java.util.UUID;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
@@ -10,7 +9,7 @@ import lombok.NonNull;
 public class Event {
 
     @NonNull
-    private final UUID id;
+    private final String id;
 
     @NonNull
     private final String payload;

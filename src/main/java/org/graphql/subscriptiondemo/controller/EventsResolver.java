@@ -1,7 +1,6 @@
 package org.graphql.subscriptiondemo.controller;
 
 import java.time.Duration;
-import java.util.UUID;
 import lombok.NonNull;
 import org.graphql.subscriptiondemo.dto.Event;
 import org.graphql.subscriptiondemo.dto.EventsInput;
@@ -19,6 +18,6 @@ public class EventsResolver {
         if (input.getLimit() > 0) {
             result = result.take(input.getLimit());
         }
-        return result.map(unused -> Event.builder().id(UUID.randomUUID()).payload(input.getPayload()).build());
+        return result.map(val -> Event.builder().id(String.valueOf(val)).payload(input.getPayload()).build());
     }
 }
