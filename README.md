@@ -36,3 +36,15 @@ input EventsInput {
 ## Requirements
 
 * Java 17 or higher.
+
+## Build docker image
+
+```shell
+./gradlew bootBuildImage
+```
+
+## Run docker image
+
+```shell
+docker run -p 8082:8082 docker.io/library/subscriptiondemo:0.0.1-SNAPSHOT
+```
