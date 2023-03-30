@@ -35,7 +35,8 @@ input EventsInput {
 
 ## Requirements
 
-* Java 17 or higher.
+* Java 17 or higher
+* Docker
 
 ## Build docker image
 
