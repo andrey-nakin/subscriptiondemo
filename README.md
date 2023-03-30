@@ -16,6 +16,20 @@ type Query {
     """
     appVersion: String!
 }
+
+type Subscription {
+    events(input: EventsInput!): Event!
+}
+
+type Event {
+    id: ID!
+    payload: String!
+}
+
+input EventsInput {
+    interval: Int! = 1000
+    payload: String!
+}
 ```
 
 ## Requirements

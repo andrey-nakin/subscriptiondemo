@@ -4,6 +4,12 @@ spring:
   graphql:
     graphiql:
       enabled: true
+      path: /playground
     path: /
+    schema:
+      introspection:
+        enabled: true
+      printer:
+        enabled: true
     websocket:
       path: /subscription
