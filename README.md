@@ -28,6 +28,7 @@ type Event {
 
 input EventsInput {
     interval: Int! = 1000
+    limit: Int! = 0
     payload: String!
 }
 ```

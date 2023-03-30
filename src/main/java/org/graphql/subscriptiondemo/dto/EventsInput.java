@@ -12,5 +12,8 @@ public class EventsInput {
     private final Integer interval;
 
     @NonNull
+    private final Integer limit;
+
+    @NonNull
     private final String payload;
 }

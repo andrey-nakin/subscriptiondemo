@@ -15,7 +15,10 @@ public class EventsResolver {
 
     @SubscriptionMapping
     public Flux<Event> events(@Argument @NonNull final EventsInput input) {
-        return Flux.interval(Duration.ofMillis(input.getInterval()))
-                .map(unused -> Event.builder().id(UUID.randomUUID()).payload(input.getPayload()).build());
+        var result = Flux.interval(Duration.ofMillis(input.getInterval()));
+        if (input.getLimit() > 0) {
+            result = result.take(input.getLimit());
+        }
+        return result.map(unused -> Event.builder().id(UUID.randomUUID()).payload(input.getPayload()).build());
     }
 }
