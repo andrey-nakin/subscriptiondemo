@@ -18,6 +18,6 @@ public class EventsResolver {
         if (input.getLimit() > 0) {
             result = result.take(input.getLimit());
         }
-        return result.map(val -> Event.builder().id(String.valueOf(val)).payload(input.getPayload()).build());
+        return result.map(val -> Event.builder().id(val.toString()).payload(input.getPayload()).build());
     }
 }
